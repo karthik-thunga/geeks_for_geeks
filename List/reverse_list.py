@@ -1,17 +1,15 @@
 # Reserve a list
 
-def reserse_list(li):
-    if len(li) <= 1:
-        return li
-    reversed_list = [None] * len(li)
+def reserse_list(arr, n):
+    if n <= 1:
+        return arr
     start = 0
-    end = len(li) - 1
+    end = n - 1
     while start <= end:
-        reversed_list[start] = li[end]
-        reversed_list[end] = li[start]
+        arr[start], arr[end] = arr[end], arr[start]
         start += 1
         end -=1
-    return reversed_list
+    return arr
 
 def reserse_list(li):
     if len(li) <= 1:
